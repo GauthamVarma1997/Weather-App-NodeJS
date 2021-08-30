@@ -12,7 +12,11 @@ const forecast = (latitude, longitude, callback) => {
         else {
             const temp = data.current.temperature;
             const feelslike = data.current.feelslike;
-            callback(undefined, "The temperature out there is " + temp + ". It feels like " + feelslike + ".")
+            const weatherDescription = data.current.weather_descriptions[0]
+            const cloudCover = data.current.cloudcover
+            const humidity = data.current.humidity
+            console.log(data.current)
+            callback(undefined, weatherDescription+". The Temperature out there is " + temp + " and it Feels like " + feelslike + ". There is a Cloud cover of "+cloudCover+" with a Humidity of "+humidity+".")
         }
     });
 }

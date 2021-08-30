@@ -26,7 +26,7 @@ app.get('', (req, res) => {
     // res.send('<h1>Welcome to my Content!</h1>');
     res.render('index', {
         title : 'Weather App',
-        name:'Jeff Musk'
+        name:'Windway'
     });
 });
 
@@ -35,7 +35,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         message : 'This is a Helpful page',
         title: 'Help',
-        name:'Jeff Musk'
+        name:'Windway'
     });
 });
 
@@ -43,14 +43,14 @@ app.get('/about', (req, res) => {
     // res.render('about');
     res.render('about', {
         title: 'About',
-        name:'Jeff Musk'
+        name:'Windway'
     });
 });
 
 app.get('/help/*', (req, res) => {
     res.render('404', {
         message:'Help article not found',
-        name : 'Jeff Musk',
+        name : 'Windway',
         title: 404
     })
 })
@@ -92,7 +92,7 @@ app.get('/products',(req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         message:'404 : Page not found',
-        name:'Jeff Musk',
+        name:'Windway',
         title: 404
     })
 })
